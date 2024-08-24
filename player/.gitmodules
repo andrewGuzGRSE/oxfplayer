@@ -1,6 +1,0 @@
-[submodule "portaudio"]
-	path = 3rdparty/portaudio
-	url = https://github.com/PortAudio/portaudio.git
-[submodule "pugixml"]
-	path = 3rdparty/pugixml
-	url = https://github.com/zeux/pugixml.git
