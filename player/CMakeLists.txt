@@ -46,14 +46,3 @@ add_subdirectory(3rdparty)
 
 # Add source code
 add_subdirectory(src)
-
-if (WIN32) 
-# Add custom actions that will copy compiled data to ISS installer folder
-
-add_custom_target(create-install-folder ALL COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_SOURCE_DIR}/../setup/input)
-
-add_dependencies(${PROJECT_NAME} create-install-folder)
-    
-add_custom_target(copy-PortAudio ALL COMMAND ${CMAKE_COMMAND} -E copy copy $<TARGET_FILE:${PROJECT_NAME}> ${CMAKE_CURRENT_SOURCE_DIR}/../setup/input)
-
-endif()

@@ -72,3 +72,13 @@ foreach(TEST_SRC ${TESTS_SRC})
     target_link_libraries(${FILE_NAME} PRIVATE Qt5::Test ${PROJECT_NAME}Lib)
 endforeach()
 
+
+if (WIN32) 
+# Add custom actions that will copy compiled data to ISS installer folder
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_SOURCE_DIR}/../../setup/input)
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:${PROJECT_NAME}> ${CMAKE_CURRENT_SOURCE_DIR}/../../setup/input/)
+
+endif()
+
