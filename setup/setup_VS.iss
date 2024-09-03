@@ -25,42 +25,8 @@
 ;* SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ;************************************************************************************/
 
-[Setup]
-AppName = ONVIFPlayer
-AppVersion = 2.0 beta
-DefaultDirName = {pf}\ONVIF\ONVIFPlayer
-DefaultGroupName = ONVIFPlayer
-LicenseFile = license.txt
-OutputDir = output
-OutputBaseFilename = ONVIFPlayerSetup
-SetupIconFile = setup.ico
+#define NormalSetup
 
-[Files]
-; exe
-Source: "input/ONVIFPlayer.exe"; DestDir: "{app}"
-; dlls
-; Qt
-Source: "input/Qt*.dll"; DestDir: "{app}"
-Source: "input/plugins/platforms/*.*"; DestDir: "{app}/plugins/platforms"
-; FFMpeg
-Source: "input/av*.dll"; DestDir: "{app}"
-Source: "input/sw*.dll"; DestDir: "{app}"
-; OpenSSL
-Source: "input/libcrypto*.dll"; DestDir: "{app}"
-Source: "input/libssl*.dll"; DestDir: "{app}"
-;Licenses
-Source: "license.txt"; DestDir: "{app}"
+#define VS
 
-[Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
-
-[Icons]
-Name: "{group}\ONVIFPlayer"; Filename: "{app}\ONVIFPlayer.exe"; WorkingDir: "{app}"
-Name: "{commondesktop}\ONVIFPlayer"; Filename: "{app}\ONVIFPlayer.exe"; WorkingDir: "{app}"; Tasks: desktopicon
-Name: "{group}\Uninstall ONVIFPlayer"; Filename: "{uninstallexe}"; WorkingDir: "{app}"
-
-[Run]
-Filename: "{app}\ONVIFPlayer.exe"; Flags: postinstall nowait
-
-
-
+#include "setup_private.iss"
