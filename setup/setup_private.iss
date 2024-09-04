@@ -54,7 +54,7 @@ Source: "VC_redist.x64.exe"; DestDir: "{tmp}"
 #endif
 ; Qt
 Source: "input/Qt*.dll"; DestDir: "{app}"
-Source: "input/plugins/platforms/*.*"; DestDir: "{app}/plugins/platforms"
+Source: "input/plugins/platforms/*.*"; DestDir: "{app}/platforms"
 ; FFMpeg
 Source: "input/av*.dll"; DestDir: "{app}"
 Source: "input/sw*.dll"; DestDir: "{app}"
