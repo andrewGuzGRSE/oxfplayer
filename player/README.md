@@ -25,9 +25,3 @@ CMAKE_PREFIX_PATH and FFMPEG_PATH needed only on Windows. On Linux libraries ins
 ```
 ctest -C Debug/Release
 ```
-
-## What was changed differ to original files
-- some openssl usage due to newer version
-- some support for x64 version
-- duplicate oxfverifier - will use from parser folder, not from parserUI folder (attention - there is some difference between them)
-- EngineTest that uses not existing calcTime function
