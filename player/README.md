@@ -5,7 +5,7 @@
 You need next programs/libraries to be installed:
 - Qt 5.12
 - OpenSSL 3.3.1 (https://slproweb.com/products/Win32OpenSSL.html)
-- FFmgpeg 4.4, not higher (https://github.com/BtbN/FFmpeg-Builds)
+- FFmgpeg 4.4, not higher (https://github.com/andrewGuzGRSE/FFmpegBuilds, https://github.com/BtbN/FFmpeg-Builds)
 
 ### Update submodules after clone
 ```
