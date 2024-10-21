@@ -36,3 +36,5 @@ build/
 .cache/
 .vscode
 Testing
+
+3rdparty/*ffmpeg*
