@@ -57,8 +57,15 @@ target_link_libraries(
          avutil
          postproc
          swresample
-         swscale
-         signed-media-framework)
+         swscale)
+
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+  target_link_libraries(${PROJECT_NAME}Lib PUBLIC signed-media-frameworkd)
+endif()
+
+if(CMAKE_BUILD_TYPE MATCHES Release)
+  target_link_libraries(${PROJECT_NAME}Lib PUBLIC signed-media-framework)
+endif()
 
 # Add executable
 add_executable(${PROJECT_NAME} resources/resources.qrc main.cpp)
